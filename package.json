@@ -6,9 +6,17 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "joi": "^14.3.1"
+    "joi": "^14.3.1",
+    "lodash": "^4.17.15"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "test": "mocha src/**/*.spec.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3"
   }
 }
