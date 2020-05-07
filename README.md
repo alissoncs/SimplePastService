@@ -52,3 +52,23 @@ Send body
   target: 'pt-BR', // accepted: pt-BR, es-ES for a while
 }
 ```
+Response body
+```
+{
+    "translation": {
+        "translation": "Olá",
+        "others": [
+            {
+                "data": {
+                    "translations": [
+                        {
+                            "translatedText": "Olá",
+                            "detectedSourceLanguage": "en"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+```
