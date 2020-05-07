@@ -27,6 +27,7 @@ class GoogleTranslateService {
   }) {
     assert.ok(target, 'target required');
     assert.ok(typeof term === 'string', 'term required');
+    assert.ok(term.length < 300, 'term max length is 300 chars');
     assert.ok(this.getValidLanguages().indexOf(target) >= 0, 'Accepted only as target: ' + this.getValidLanguages().join(','));
 
     const text = term;
