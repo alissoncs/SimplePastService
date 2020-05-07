@@ -31,13 +31,12 @@ class GoogleTranslateService {
     assert.ok(this.getValidLanguages().indexOf(target) >= 0, 'Accepted only as target: ' + this.getValidLanguages().join(','));
 
     const text = term;
-    const translate = new Translate({
+    const translate = new this.Translate({
       projectId: this.projectId,
       apiKey: this.apiKey,
       key: this.apiKey,
     });
 
-    // const target = 'pt';
     const [translation, ...others] = await translate.translate(text, target);
 
     return {
