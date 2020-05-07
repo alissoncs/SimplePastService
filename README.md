@@ -28,7 +28,7 @@ Any request requires a HTTP Header called `api_key=KEY` :rotating_light:
 If you want to use this API, just send me an email: webalissoncs@gmail.com
 requesting the API code
 
-### Status 
+### Status
 ```
 GET /
 ```
@@ -37,4 +37,16 @@ GET /
 
 ```
 GET /verbs/simple-past
+```
+### Translate a word
+
+```
+POST /v1/translate
+```
+Send body
+```
+{
+  term: "Hello World",
+  target: 'pt-BR', // accepted: pt-BR, es-ES for a while
+}
 ```
