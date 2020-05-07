@@ -38,11 +38,13 @@ GET /
 ```
 GET /verbs/simple-past
 ```
+
 ### Translate a word
 
 ```
 POST /v1/translate
 ```
+
 Send body
 ```
 {
