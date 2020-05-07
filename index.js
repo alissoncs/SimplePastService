@@ -4,31 +4,17 @@ const assert = require('assert');
 const app = express();
 
 const routes = require('./src/routes');
+const ErrorHandler = require('./src/middlewares/ErrorHandler');
+const ApiKey = require('./src/middlewares/ApiKey');
 
 app.use(require('body-parser').urlencoded());
 app.use(require('body-parser').json());
 
 const port = process.env.PORT || 3000;
 
-app.use((req, res, next) => {
-  assert.ok(process.env.API_KEY, 'process.env.API_KEY required');
-  if (req.headers.apikey !== process.env.API_KEY) {
-    return res.json({
-      error: 'Invalid APIKEY. Please send correct header "apikey"',
-    }).status(401);
-  }
-  next();
-});
-
+app.use(ApiKey());
 app.use(routes);
-
-app.use((err, req, res, next) => {
-  console.error(err);
-  return res.json({
-    error: err.message,
-    details: err,
-  }).status(500);
-})
+app.use(ErrorHandler());
 
 app.listen(port, () => {
   console.info(`App running at ${port} :D`);

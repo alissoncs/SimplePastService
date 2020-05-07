@@ -32,7 +32,6 @@ routes.post('/v1/translate', (req, res) => {
       error: err.message,
     }).status(500);
   });
-
 });
 
 module.exports = routes;
