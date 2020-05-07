@@ -20,9 +20,11 @@ routes.get('/verbs/simple-past', (req, res) => {
 
 routes.post('/v1/translate', (req, res) => {
   const service = new GoogleTranslateService();
+  const { term, target } = req.body;
+
   service.translate({
-    term: req.body.term,
-    target: 'pt-BR',
+    term,
+    target,
   }).then((translation) => {
     return res.json({
       translation,
