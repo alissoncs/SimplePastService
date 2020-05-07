@@ -39,8 +39,7 @@ class GoogleTranslateService {
 
     // const target = 'pt';
     const [translation, ...others] = await translate.translate(text, target);
-    console.log(`Text: ${text}`);
-    console.log(`Translation: ${translation}`);
+
     return {
       translation,
       others,

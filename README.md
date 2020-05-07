@@ -23,7 +23,7 @@ https://github.com/brunoklein/SimplePastApp
 
 API base endpoint: https://simple-past-service.herokuapp.com/
 
-Any request requires a HTTP Header called `api_key=KEY` :rotating_light:
+Any request requires a HTTP Header called `apikey=KEY` :rotating_light:
 
 If you want to use this API, just send me an email: webalissoncs@gmail.com
 requesting the API code
