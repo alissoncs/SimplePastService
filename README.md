@@ -1,7 +1,7 @@
 # SimplePastService
 Its a server application for the SimplePastApp :see_no_evil:
 
-v[![alissoncs](https://circleci.com/gh/alissoncs/SimplePastService.svg?style=svg)](https://circleci.com/gh/alissoncs/SimplePastService)
+[![alissoncs](https://circleci.com/gh/alissoncs/SimplePastService.svg?style=svg)](https://circleci.com/gh/alissoncs/SimplePastService)
 
 
 Available Google Play
